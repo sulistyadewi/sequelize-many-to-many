@@ -1,0 +1,18 @@
+<table border="1">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Real Name</th>
+      <th>Transaction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% data.forEach(user => { %>
+    <tr>
+      <td><%= user.userName %></td>
+      <td><%= user.realName %></td>
+      <td><a href="users/<%= user.id %>/detail">Detail</a></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>

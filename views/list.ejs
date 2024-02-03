@@ -1,0 +1,23 @@
+<table border="1">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% dataCombined.forEach(user => { %> <% user.Products.forEach(product => {
+    %>
+    <tr>
+      <td><%= user.userName %></td>
+      <td><%= product.name %></td>
+      <td><%= product.price %></td>
+      <td><%= product.Transaction.qty %></td>
+      <td><%= product.price * product.Transaction.qty %></td>
+    </tr>
+    <% }) %> <% }) %>
+  </tbody>
+</table>
